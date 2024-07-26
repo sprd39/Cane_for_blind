@@ -51,10 +51,10 @@ I have completed my first milestone! I have finished the wiring of the different
 
 
 # Schematics 
-Here's where you'll put images of your schematics. [Tinkercad](https://www.tinkercad.com/blog/official-guide-to-tinkercad-circuits) and [Fritzing](https://fritzing.org/learning/) are both great resoruces to create professional schematic diagrams, though BSE recommends Tinkercad becuase it can be done easily and for free in the browser. 
+#Here's where you'll put images of your schematics. [Tinkercad](https://www.tinkercad.com/blog/official-guide-to-tinkercad-circuits) and [Fritzing](https://fritzing.org/learning/) are both great resoruces to create professional schematic diagrams, though BSE recommends Tinkercad becuase it can be done easily and for free in the browser. 
 
 # Code
-Here's where you'll put your code. The syntax below places it into a block of code. Follow the guide [here]([url](https://www.markdownguide.org/extended-syntax/)) to learn how to customize it to your project needs. 
+#Here's where you'll put your code. The syntax below places it into a block of code. Follow the guide [here]([url](https://www.markdownguide.org/extended-syntax/)) to learn how to customize it to your project needs. 
 
 ```c++
 void setup() {
@@ -70,8 +70,7 @@ void loop() {
 ```
 
 # Bill of Materials
-Here's where you'll list the parts in your project. To add more rows, just copy and paste the example rows below.
-Don't forget to place the link of where to buy each component inside the quotation marks in the corresponding row after href =. Follow the guide [here]([url](https://www.markdownguide.org/extended-syntax/)) to learn how to customize this to your project needs. 
+
 
 | **Part** | **Note** | **Price** | **Link** |
 |:--:|:--:|:--:|:--:|
@@ -80,10 +79,10 @@ Don't forget to place the link of where to buy each component inside the quotati
 | Walking Cane | What the item is used for | $10.99 | <a href="https://www.amazon.com/dp/B0CDMD98WW?ref=cm_sw_r_cso_cp_apin_dp_K5GQXJSBZVNS5YNW3NEM&ref_=cm_sw_r_cso_cp_apin_dp_K5GQXJSBZVNS5YNW3NEM&social_share=cm_sw_r_cso_cp_apin_dp_K5GQXJSBZVNS5YNW3NEM&starsLeft=1&th=1"> Link </a> |
 | Vibrating Motor Module | What the item is used for | $8.69 | <a href="https://www.amazon.com/DAOKI-Vibration-Vibrating-Vibrator-Electronic/dp/B081W4CTNY/ref=sr_1_4?crid=1HIXGEJDEQ1Z8&dib=eyJ2IjoiMSJ9.UIpViK-oNwsFrMDYjG2mw3JjFsvLvCct4jBnGPCSo3LQMbiJOKjyeuWRfkNfwhST0U5WEHAzNvZLIjx7uXHiS4fmxQmtaA4o7lv7RuXwsmYeqLFknXDEMmpu-UKXYitCdIfaJy6Lt0sfe_oKM3FnhBjvyvO6pogMdftUXUMXymAmnhrENGlaP2DgzmtsTk62Rly2EDGGEqdpSCimbQzwHs_We_eMeC9bWOlNvvns2qBTbAdV78gG7NzbSd_6bDqhNhF7jZPQ6QKz6pDM6ozSWfFNYhgdfEBcfCTJ8n7hmG0.31LckcCEIL5OgrFyW2AhGX13FpyOuD8HN9kjfFZ103Y&dib_tag=se&keywords=vibrating+motor+arduino&qid=1720652605&s=industrial&sprefix=vibrating+motor+arduino%2Cindustrial%2C75&sr=1-4"> Link </a> |
 
-# Other Resources/Examples
-One of the best parts about Github is that you can view how other people set up their own work. Here are some past BSE portfolios that are awesome examples. You can view how they set up their portfolio, and you can view their index.md files to understand how they implemented different portfolio components.
-- [Example 1](https://trashytuber.github.io/YimingJiaBlueStamp/)
-- [Example 2](https://sviatil0.github.io/Sviatoslav_BSE/)
-- [Example 3](https://arneshkumar.github.io/arneshbluestamp/)
+#Other Resources/Examples
+#One of the best parts about Github is that you can view how other people set up their own work. Here are some past BSE portfolios that are awesome examples. You can view how they set up their portfolio, and you can view their index.md files to understand how they implemented different portfolio components.
+- #[Example 1](https://trashytuber.github.io/YimingJiaBlueStamp/)
+- #[Example 2](https://sviatil0.github.io/Sviatoslav_BSE/)
+- #[Example 3](https://arneshkumar.github.io/arneshbluestamp/)
 
-To watch the BSE tutorial on how to create a portfolio, click here.
+#To watch the BSE tutorial on how to create a portfolio, click here.
