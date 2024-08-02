@@ -29,17 +29,13 @@ You should comment out all portions of your portfolio that you have not complete
 
 
 
-<!--- # Second Milestone -->
+# Second Milestone 
 
 <!--- **Don't forget to replace the text below with the embedding for your milestone video. Go to Youtube, click Share -> Embed, and copy and paste the code to replace what's below.** -->
 
-<!--- <iframe width="560" height="315" src="https://www.youtube.com/embed/y3VAmNlER5Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> -->
+ <iframe width="560" height="315" src="https://youtu.be/zkXQQrSQfwMhttps://youtu.be/zkXQQrSQfwM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-<!--- For your second milestone, explain what you've worked on since your previous milestone. You can highlight: -->
-<!--- - Technical details of what you've accomplished and how they contribute to the final goal -->
-<!--- - What has been surprising about the project so far -->
-<!--- - Previous challenges you faced that you overcame -->
-<!--- - What needs to be completed before your final milestone  -->
+I have worked on many things for this milestone. I added a sound that changes based on how far the object is. For example, if an object is detected less than 14cm away a different sound will play than a object detected 27cm away. Another thing I added for this milestone was my water sensor to help detect puddles. It will print on the serial moniter on the computer of how deep the water is. For my next steps I plan to add actual serial moniter (not just my computer) and attach it to my walking stick. If I have enough time, I will try to add a temparature sensor. One challenge that I faced was using my water sensor. The readings were the exact opposite of what I wanted them to be. When it was out of the water, the readings were supposed to be low and high inside the water. However, it was the exact opposite for me. I solved this by changing the code to fit this. When the sensor read a low number, I coded it so that the serial moniter would print that something was in the water. 
 
 # First Milestone
 
