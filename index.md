@@ -1,5 +1,6 @@
 # Walking Stick For the Visually Impaired 
-My project is a Smart Walking Stick for the Visually Impaired.  You can include what the biggest challenges, takeaways, and triumphs from completing the project were. As you complete your portfolio, remember your audience is less familiar than you are with all that your project entails!
+My project is a Smart Walking Stick for the Visually Impaired. It helps the visually people cross streets, navigate potential obstacles, and helps them go about their day! It has a ultrasonic sensor that detects objects and plays a higher sound the closer the object is. I also have a water sensor attached to detect puddles. However, none of this could be possible without me joining Bluestamp. I joined Bluestamp to bridge the gap between my software engineering background and the tangible world of hardware. Working with an Arduino, connecting wires, experimenting with resistors, and integrating various sensors was a thrilling new challenge that pushed me to expand my engineering skill set.
+
 
 You should comment out all portions of your portfolio that you have not completed yet, as well as any instructions:
 ```HTML 
@@ -21,10 +22,7 @@ You should comment out all portions of your portfolio that you have not complete
 
 <!--- <iframe width="560" height="315" src="https://youtu.be/agOPqsIDC58?si=HJTOiBWu5mygd-yS" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> -->
 
-Since my previous milestone, I have learned 
-<!--- - What your biggest challenges and triumphs were at BSE -->
-<!--- - A summary of key topics you learned about -->
-<!--- - What you hope to learn in the future after everything you've learned at BSE -->
+Since my previous milestone, I actually put all my wires and sensors together in a usable product that people can use. I placed the Arduino, breadboard, speaker, and vibrating module in the box; the ultrasonic and water sensors were outside of the box. Now, this cane can be used by a user. This wouldn't have been possible through everything I learned at BSE. I learned how to use an Arduino, attach different wires into the breadboard, how different sensors work, and how to code using the Arduino language. This was a hands-on approach I had never experienced while engineering. In the future, I hope to take all the knowledge I learned at BSE to improve my current project by adding more sensors and creating new projects.
 
 
 
