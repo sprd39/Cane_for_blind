@@ -20,7 +20,7 @@ You should comment out all portions of your portfolio that you have not complete
 
 <!--- **Don't forget to replace the text below with the embedding for your milestone video. Go to Youtube, click Share -> Embed, and copy and paste the code to replace what's below.** -->
 
-<!--- <iframe width="560" height="315" src="https://youtu.be/agOPqsIDC58?si=HJTOiBWu5mygd-yS" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> -->
+<!--- <iframe width="560" height="315" src="https://youtu.be/EWFnbWfkoFg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> -->
 
 Since my previous milestone, I actually put all my wires and sensors together in a usable product that people can use. I placed the Arduino, breadboard, speaker, and vibrating module in the box; the ultrasonic and water sensors were outside of the box. Now, this cane can be used by a user. This wouldn't have been possible through everything I learned at BSE. I learned how to use an Arduino, attach different wires into the breadboard, how different sensors work, and how to code using the Arduino language. This was a hands-on approach I had never experienced while engineering. In the future, I hope to take all the knowledge I learned at BSE to improve my current project by adding more sensors and creating new projects.
 
@@ -50,15 +50,121 @@ I have completed my first milestone! I have finished the wiring of the different
 #Here's where you'll put your code. The syntax below places it into a block of code. Follow the guide [here]([url](https://www.markdownguide.org/extended-syntax/)) to learn how to customize it to your project needs. 
 
 ```c++
+#define trigPin 11
+#define echoPin 12
+#define motor 7
+#define buzzer 3
+#define switchPin 5
+
+const int read = A1; //Sensor AO pin to Arduino pin A0
+int value;   
+
+long duration, cm;
+
+#include"pitches.h"
+
 void setup() {
-  // put your setup code here, to run once:
-  Serial.begin(9600);
-  Serial.println("Hello World!");
+ Serial.begin(9600);
+ pinMode(trigPin, OUTPUT);
+ pinMode(echoPin, INPUT);
+ pinMode(motor, OUTPUT);
+ pinMode(buzzer, OUTPUT);
+ pinMode(switchPin, OUTPUT);
+ pinMode(read,INPUT);
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
+ // Calculate distance
+ digitalWrite(trigPin, LOW);
+ delayMicroseconds(2);
+ digitalWrite(trigPin, HIGH);
+ delayMicroseconds(10);
+ digitalWrite(trigPin, LOW);
+ duration = pulseIn(echoPin, HIGH);
+ cm = microsecondsToCentimeters(duration);
 
+if(cm <= 14 )
+ {
+   tone(switchPin, 784);
+   digitalWrite(switchPin, HIGH);
+   delay(1000);
+   Serial.println("in condition 1");
+    digitalWrite(motor,HIGH); // When the the distance below 100cm
+    digitalWrite(buzzer,HIGH);
+ }
+   else if(cm <= 24)
+   {
+      tone(switchPin, 698);
+      delay(1000);
+      Serial.println("in condition 2");
+       digitalWrite(motor,HIGH); // When the the distance below 100cm
+       digitalWrite(buzzer,HIGH);
+   }
+   else if(cm <= 34 )
+   {
+     tone(switchPin, 659);
+     delay(1000);
+     Serial.println("in condition 3");
+      digitalWrite(motor,HIGH); // When the the distance below 100cm
+      digitalWrite(buzzer,HIGH);
+   }
+   else if(cm <= 44)
+   {
+     tone(switchPin, 587);
+     delay(1000);
+     Serial.println("in condition 4");
+      digitalWrite(motor,HIGH); // When the the distance below 100cm
+      digitalWrite(buzzer,HIGH);
+   }
+   else if(cm <= 55 )
+   {
+     tone(switchPin, 523);
+     delay(1000);
+     Serial.println("in condition 5");
+      digitalWrite(motor,HIGH); // When the the distance below 100cm
+      digitalWrite(buzzer,HIGH);
+   }
+   else if(cm <= 65 )
+   {
+     tone(switchPin, 494);
+     delay(1000);
+     Serial.println("in condition 6");
+      digitalWrite(motor,HIGH); // When the the distance below 100cm
+     digitalWrite(buzzer,HIGH);
+   }
+ else
+ {
+   noTone(switchPin);
+   digitalWrite(switchPin, LOW);
+ }
+ delay(100);
+value = analogRead(read);
+Serial.println(value);
+  if (value >=540){
+   Serial.println("Water level: 0mm - Empty!");
+ }
+ else if (value>220 && value<=260){
+   Serial.println("Water level: 0mm to 5mm");
+ }
+ else if (value>185 && value<=220){
+   Serial.println("Water level: 5mm to 10mm");
+ }
+ else if (value>177 && value<=185){
+   Serial.println("Water level: 10mm to 15mm");
+ }
+ else if (value>172 && value<=176){
+   Serial.println("Water level: 15mm to 20mm");
+ }
+ else if (value>168 && value<=171){
+   Serial.println("Water level: 20mm to 25mm");
+ }
+
+
+}
+
+
+long microsecondsToCentimeters(long microseconds) {
+ return microseconds / 29 / 2;
 }
 ```
 
@@ -76,10 +182,8 @@ void loop() {
 | Temparature Sensor | Detecting between sidewalk and road | $14.99 | <a href="https://www.amazon.com/BOJACK-Temperature-Sensors-TMP36GZ-Precision/dp/B08BFY91ZW/ref=sr_1_1?crid=31Y6Y8IX9R3TM&dib=eyJ2IjoiMSJ9.VzayGqBKyq8z4l9agIQLpSOKdW4RxWLf8oRlmh7bJhHGjHj071QN20LucGBJIEps.4XaoDQR0tDC2HLOzaeTze-e1Ql7xXOdd3zRIyRnSMzc&dib_tag=se&keywords=BOJACK+TMP36&qid=1722014155&sprefix=bojack+tmp36%2Caps%2C60&sr=8-1"> Link </a> |
 | Speaker | Amplifying sound | $6.99 | <a href="https://www.amazon.com/Fielect-Magnet-Speaker-Internal-Diameter/dp/B0826YLV6C/ref=sr_1_1?crid=1S95IIG65GFFJ&dib=eyJ2IjoiMSJ9.7rVScTfTCbTp4d5573lwZ0PxeRLW61PQzlHBdpSWsVNiHE-9osFsZUmXRI4nItGthZ3RfzLZv7PPY5_Mv7m&th=1"> Link </a> |
 | Color Recognition Sensor | Detecting Trash | $13.99 | <a href="https://www.amazon.com/Teyleten-Robot-TCS230-TCS3200-Recognition/dp/B08HH8QYF8/ref=sr_1_1?crid=1CBVXU3V285WN&dib=eyJ2IjoiMSJ9.Rh-iSB4O8efW_XG-LqWoS54NMIE1k6kB2W5WuA4Vat4QsZk_eAaSmWWaL-qTwbGXoMVgUDNUSf4YHj53Ot"> Link </a> |
-#Other Resources/Examples
-#One of the best parts about Github is that you can view how other people set up their own work. Here are some past BSE portfolios that are awesome examples. You can view how they set up their portfolio, and you can view their index.md files to understand how they implemented different portfolio components.
-- #[Example 1](https://trashytuber.github.io/YimingJiaBlueStamp/)
-- #[Example 2](https://sviatil0.github.io/Sviatoslav_BSE/)
-- #[Example 3](https://arneshkumar.github.io/arneshbluestamp/)
+| Box | To hold all of my components  | $8.99 | <a href="https://www.amazon.com/LeMotech-Junction-Dustproof-Waterproof-Electrical/dp/B07BPPKF2C/ref=sxin_31_pa_sp_phone_search_thematic_sspa?content-id=amzn1.sym.c98882c1-8429-4bde-81de-021904a36ced%3Aamzn1.sym.c98882c1-8429-4bde-81de-021904a36ced&crid=9V5JT9X982FV&cv_ct_cx=box%2Bfor%2Belectronics%2Barduino&dib=eyJ2IjoiMSJ9.0qJhcH-QmMCyoopqBd72DRuwgkjsFelbtUAFXMCh6xzGjHj071QN20LucGBJIEps.eTlhXfKvm5PY_TwZa_deYpiVTFrumUn-CxVYeU0IoZ0&dib_tag=se&keywords=box%2Bfor%2Belectronics%2Barduino&pd_rd_i=B07BPPKF2C&pd_rd_r=b3a9aef8-154d-4f7a-ab34-2894e7c9db37&pd_rd_w=bELqh&pd_rd_wg=VX8M6&pf_rd_p=c98882c1-8429-4bde-81de-021904a36ced&pf_rd_r=VXTZQ49J6B40DVVXJJC7&qid=1721827047&sbo=RZvfv%2F%2FHxDF%2BO5021pAnSA%3D%3D&sprefix=box%2Bfor%2Belextronics%2Barduino%2Caps%2C82&sr=1-1-364cf978-ce2a-480a-9bb0-bdb96faa0f61-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9waG9uZV9zZWFyY2hfdGhlbWF0aWM&th=1"> Link </a> |
+| Serial Monitor | To display puddle depth  | $9.99 | <a href="https://www.amazon.com/GeeekPi-Interface-Adapter-Backlight-Raspberry/dp/B07QLRD3TM/ref=sr_1_1?crid=1MC4CXT2ZGUEW&dib=eyJ2IjoiMSJ9.i8X1MwCMXd2eXMMjd6xR9FzV04IDQG0iMWkR5okAmEOmZLHe6uas96B5zmNXTM3Nx3292irD2N-ZZgEroMEB1n--2hzqDVxTkBHAkqhj9qyl01GsqXo56PXSvYBuEhXifT3fxzEPgZwVMcjUnA_czYZvjnqbCeHK-J40rhp2jkpgO_7WEwyLmPOJxECIeEtp-NmjsXdu3ZT_kSSAfiSY_YTM-5PABDfwUFt1L6FhY_8.xOIFUBwMt6w3FHQQwgUlRnLuLC2ef-AHmegXEMGi8S0&dib_tag=se&keywords=arduino+serial+monitor&qid=1722519419&sprefix=arduino+serial+monitor%2Caps%2C73&sr=8-1"> Link </a> |
 
-#To watch the BSE tutorial on how to create a portfolio, click here.
+
+
