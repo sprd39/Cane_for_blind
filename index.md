@@ -10,7 +10,7 @@ My project is a Smart Walking Stick for the Visually Impaired. It helps the visu
 
 
 
-![Headstone Image](logo.svg)
+![Headstone Image](full.png)
   
 # Final Milestone
 
